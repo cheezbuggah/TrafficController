@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Runner</title>
+		<link rel="stylesheet" href="runner.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+		<script src="runner.js"></script>
+	</head>
+	<body>
+		<button id="btn">Ask for the floor plan!</button>
+		<button id="reset">Reset me!</button>
+		<button id="quit">Exit server!</button>
+		<label for="light">Traffic light:</label>
+		<input name="light" id="light" type="text" maxlength="5">
+		<button id="queueTraffic">Place traffic!</button>
+		<h1>Controller response:</h1>
+		<div id="response-holder">No response yet!</div>
+		<div id="floorplan"></div>
+		<!--
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NdsZWrTn5qI?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		-->
+	</body>
+</html>

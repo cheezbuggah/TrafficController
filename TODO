@@ -1,0 +1,42 @@
+- Zorgen dat de controller alleen ontvangt (een soort 'leeg' algoritme)
+- E1 wordt in de simulator aangestuurd
+- F1 en F2: stoplichten voor de trein
+
+NOTITIES LES (Test met Emiel):
+- Ontvangt bij drukplaten de B stoplichten 2x
+
+General notities:
+- Test met Daniël, simulator kan geen byte array ontvangen, zie error log
+- Test met Emiel, Gaf de trein prioriteit terwijl er geen trein was: ligt hoogstwaarschijnlijk aan het feit dat E1 in de
+lijst zelf staat.
+- Test met Eddy, gaf A1 prioriteit terwijl er geen verkeer stond. Ook nog niet optimale prioriteit.
+
+SCENARIOS:
+- Als er een trein aankomt (E1 = groen), dan moeten de stoplichten die het spoor kruisen op rood
+- Als er een bus aankomt (D1 drukplaat geactiveerd), moeten die kruisende banen op rood en D1 op groen)
+
+Testen
+
+Sjoerd & Pepijn:
+Wat gebeurt er:
+Fietsers en voetgangers gaan steeds als eerste voor, ookal staat een A stoplicht vol. Te snel prioriteit. A wordt wel
+op groen gezet, maar te laat. B en C gaan vaker. A6 en A7 gaan nooit. Stoplichten waar geen verkeer staat gaan wel op
+groen (kijken naar de random.shuffle).
+
+Sjoerd & Jeffrey:
+Wat gebeurt er:
+Jeffrey krijgt een NULL reference exception. Trein gaat heel snel, bus gaat niet.
+
+Sjoerd & Eddy
+Wat gebeurt er:
+Voetgangers en fietsers gaan eerst, veel vaker dan de A stoplichten. Na 3x de voetgangers en fietsers voor te laten gaan,
+gaan A1, A3 en A4 stoplichten pas. Kijken naar random.shuffle. F1 doet niks.
+
+Sjoerd & Andries
+Wat gebeurt er:
+A6 en A7 blijven lage prioriteit houden. Gaan helemaal niet. Meerdere stoplichten kunnen tegelijk veranderd worden.
+
+Sjoerd & Johan
+Wat gebeurt er:
+Johan krijgt een NULL pointer exception.
+
