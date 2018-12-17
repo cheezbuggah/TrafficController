@@ -107,7 +107,8 @@ class Controller:
 		for light, data in self.floorPlan.items():
 			light_info = {
 				'light': light,
-				'status': data['colour']
+				'status': data['colour'],
+				'timer': data['timer']
 			}
 
 			if data['timer'] is not None:
